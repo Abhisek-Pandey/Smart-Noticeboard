@@ -3,7 +3,7 @@ import sys
 import time
 import tkinter as tk
 from PIL import Image,ImageTk
-os.chdir("/home/AbhisekPandey/Project/") 
+os.chdir(".") 
 root = tk.Tk()
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 root.overrideredirect(1)

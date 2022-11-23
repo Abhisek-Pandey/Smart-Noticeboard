@@ -1,8 +1,8 @@
+import os
 import vlc
 import time
 import sys
-import os
-os.chdir("/home/AbhisekPandey/Project/Notices/")
+os.chdir("./Notices/")
 Notices = [f for f in os.listdir('.') if os.path.isfile(f)]
 media_player = vlc.MediaPlayer()
 media_player.toggle_fullscreen()

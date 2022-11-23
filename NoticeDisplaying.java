@@ -18,7 +18,7 @@ public class NoticeDisplaying	{
 				/*Storing the value of the waitFor()*/
 				exitVal = process.waitFor();
 				assert exitVal == 0  : ("Command Executed Successfully!!! Photos are being Displayed \n\n"+output);
-				assert exitVal != 0 : ("Error while Executing command  \n Video are not being Displayed");	
+				assert exitVal != 0 : ("Error while Executing command  \n Photos are not being Displayed");	
 			/*Displaying Document files*/
 				command = "python3 DocDis.py";
 				process = Runtime.getRuntime().exec(command);

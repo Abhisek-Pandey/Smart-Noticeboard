@@ -1,7 +1,7 @@
 import java.io.*;
 public class SmartNoticeBoard	{
 	//Declaring a File object to store the Notices in one folder
-	static final File Notices = new File("/home/AbhisekPandey/Project/Notices");
+	static final File Notices = new File("./Notices");
 	//Getting the list of all the Media file present in Notices folder and storring them ib ab Array
 	static File[] NoticesContent = null;
 	public static void main(String[] args) throws Exception	{

@@ -12,9 +12,9 @@ import org.apache.pdfbox.rendering.PDFRenderer;
 
 public class FileArrangement{
 	//Declaring String Object of all the media files location
-	static private final String docPath = "/home/AbhisekPandey/Project/document/";
-	static private final String photoPath = "/home/AbhisekPandey/Project/photo/";
-	static private final String videoPath = "/home/AbhisekPandey/Project/video/";
+	static private final String docPath = "./document/";
+	static private final String photoPath = "./photo/";
+	static private final String videoPath = "./video/";
 	/* Declaring all File Object required to get the respect media files using listFiles()
 	   to get an Array of all the media file present*/
 	static private File documentFiles = new File(docPath);	 	
@@ -25,7 +25,7 @@ public class FileArrangement{
 	static private PDFRenderer pdfRenderer;
 	static private String fileName;
 	static private final int DPI = 300;
-	public static void Arrange()	{
+	public static void main(String[] args)	{
 		/*Getting list of all files*/
 		File[] documentContent = documentFiles.listFiles();	
 		File[] photoContent = photoFiles.listFiles();
@@ -56,7 +56,7 @@ public class FileArrangement{
                 PDFRenderer pdfRenderer = new PDFRenderer(document);
                 fileName = N.getName().replace(".pdf","");
                 int NoOfPages = document.getNumberOfPages();
-                File Destination = new File("/home/AbhisekPandey/Project/Notices/"+fileName+"/");
+                File Destination = new File("./Notices/"+fileName+"/");
                 if(!Destination.exists())	{
 					Destination.mkdir();
 					}
@@ -71,12 +71,12 @@ public class FileArrangement{
 			if(photoContent != null)
 			for(File N : photoContent)	{
 				fileName = N.toString().substring(photoPath.length());
-				Files.move(Paths.get(N.toString()),Paths.get("/home/AbhisekPandey/Project/Notices/"+fileName));
+				Files.move(Paths.get(N.toString()),Paths.get("./Notices/"+fileName));
 			}
 			if(videoContent != null)
 			for(File N : videoContent)	{
 				fileName = N.toString().substring(videoPath.length());
-				Files.move(Paths.get(N.toString()),Paths.get("/home/AbhisekPandey/Project/Notices/"+fileName));
+				Files.move(Paths.get(N.toString()),Paths.get("./Notices/"+fileName));
 			}
 		}
 		catch(IOException IO)	{System.out.println(IO);}
