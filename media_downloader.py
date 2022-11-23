@@ -368,7 +368,6 @@ def main():
             len(set(FAILED_IDS)),
         )
     update_config(updated_config)
-    check_for_updates()
 
 
 if __name__ == "__main__":

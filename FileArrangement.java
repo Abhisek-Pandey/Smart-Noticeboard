@@ -1,9 +1,6 @@
 import java.io.IOException;
 import java.nio.file.*;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -25,7 +22,7 @@ public class FileArrangement{
 	static private PDFRenderer pdfRenderer;
 	static private String fileName;
 	static private final int DPI = 300;
-	public static void main(String[] args)	{
+	public static void arrange()	{
 		/*Getting list of all files*/
 		File[] documentContent = documentFiles.listFiles();	
 		File[] photoContent = photoFiles.listFiles();
@@ -49,23 +46,25 @@ public class FileArrangement{
 			else 
 				Files.createDirectory(Paths.get(SmartNoticeBoard.Notices.toString()));
 			/*Arranging all files ina single folder known as Notices*/
-			if(documentContent != null)
-			for(File N : documentContent)	{
-				if(N.getName().endsWith(".pdf"))	{
-				PDDocument document = PDDocument.load(N);
-                PDFRenderer pdfRenderer = new PDFRenderer(document);
-                fileName = N.getName().replace(".pdf","");
-                int NoOfPages = document.getNumberOfPages();
-                File Destination = new File("./Notices/"+fileName+"/");
-                if(!Destination.exists())	{
-					Destination.mkdir();
+			if(documentContent != null)	{
+				for(File N : documentContent)	{
+					if(N.getName().endsWith(".pdf"))	{
+						document = PDDocument.load(N);
+            		    pdfRenderer = new PDFRenderer(document);
+            		    fileName = N.getName().replace(".pdf","");
+            		    int NoOfPages = document.getNumberOfPages();
+            		    File Destination = new File("./Notices/"+fileName+"/");
+           		    if(!Destination.exists())	{
+						Destination.mkdir();
 					}
-                for(int i = 0;i < NoOfPages; i++)	{
-					File outputFile = new File(Destination.toString()+"/"+fileName+"_"+(i+1)+"."+"png");
-					BufferedImage bImage = pdfRenderer.renderImageWithDPI(i, DPI, ImageType.RGB);
-					ImageIO.write(bImage, "png", outputFile);
+             	    for(int i = 0;i < NoOfPages; i++)	{
+						File outputFile = new File(Destination.toString()+"/"+fileName+"_"+(i+1)+"."+"png");
+						BufferedImage bImage = pdfRenderer.renderImageWithDPI(i, DPI, ImageType.RGB);
+						ImageIO.write(bImage, "png", outputFile);
 					}
-				document.close();
+					document.close();
+					}
+					N.delete();
 				}
 			}
 			if(photoContent != null)
@@ -80,5 +79,5 @@ public class FileArrangement{
 			}
 		}
 		catch(IOException IO)	{System.out.println(IO);}
-}
+	}
 }
