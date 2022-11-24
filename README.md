@@ -1,12 +1,6 @@
 
 <h1 align="center">Smart Noticeboard</h1>
 
-<p align="center">
-<a href="https://github.com/Dineshkarthik/telegram_media_downloader/actions"><img alt="Unittest" src="https://github.com/Dineshkarthik/telegram_media_downloader/workflows/Unittest/badge.svg"></a>
-<a href="https://codecov.io/gh/Dineshkarthik/telegram_media_downloader"><img alt="Coverage Status" src="https://codecov.io/gh/Dineshkarthik/telegram_media_downloader/branch/master/graph/badge.svg"></a>
-<a href="https://github.com/Dineshkarthik/telegram_media_downloader/blob/master/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
-<a href="https://github.com/python/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-</p>
 
 <h3 align="center">
   <a href="https://mail.google.com/mail/u/0/?fs=1&to=abhisek.pandey.1289@gmail.com&su=Feature%20Request%20for%20Smart%20NoticeBoard&body=I%20would%20like%20that%20you%20would%20include%20&bcc=pandey240600@gmail.com&tf=cm">Feature request</a>
@@ -14,7 +8,7 @@
   <a href="https://mail.google.com/mail/u/0/?fs=1&to=abhisek.pandey.1289@gmail.com&su=Bug%20Detected%20in%20Smart%20NoticeBoard&body=I%20saw%20this%20bug%20&bcc=pandey240600@gmail.com&tf=cm">Report a bug</a>
   <span> · </span>
   Support: <a href="https://t.me/abhisekJii">Discussions</a>
-  <span> & </span>
+
 </h3>
 
 ### Overview:
@@ -33,7 +27,7 @@ Display all the Notices on a screen from anywhere with a Telegram channel
 
 1. Save the Project to the `Raspberry Pi`. 
 2. Configure the `config.yaml`
-3. #$%#$%$%
+3. Run the Setup.py
 ## Configuration
 
 All the configurations are  passed to the Smart Noticeboard via `config.yaml` file.
@@ -100,10 +94,6 @@ file_formats:
 
 ## Execution
 After proper setup is done, every time the Pi boots up it will automatically run, and would start displaying the Notice Media files in loop
-
-## Proxy
-`socks4, socks5, http` proxies are supported in this project currently. To use it, add the following to the bottom of your `config.yaml` file
-
 
 
 
