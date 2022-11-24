@@ -9,7 +9,7 @@
 </p>
 
 <h3 align="center">
-  <a href="https://github.com/Dineshkarthik/telegram_media_downloader/discussions/categories/ideas">Feature request</a>
+  <a href="pandey240600@gmail.com">Feature request</a>
   <span> · </span>
   <a href="https://github.com/Dineshkarthik/telegram_media_downloader/issues">Report a bug</a>
   <span> · </span>
