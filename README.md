@@ -16,7 +16,7 @@ Display all the Notices on a screen from anywhere with a Telegram channel
 ### Support:
 | Category | Support |
 |--|--|
-|Language | `Python 3.7 ` and above,  `Java 17`|
+|Language | `Python 3.7` and above,  `Java 17`|
 |Supported media types|   document, photo, video|
 
 ### ToDo:
@@ -84,14 +84,15 @@ file_formats:
   password: your_password
 ```
 
-- api_hash  - The api_hash you got from telegram apps
-- api_id - The api_id you got from telegram apps
-- chat_id -  The id of the chat/channel you want to download media. Which you get from the above-mentioned steps.
-- media_types - Type of media to download, you can update which type of media you want to download it can be one or any of the available types.
-- file_formats - File types to download for supported media types which are `audio`, `document` and `video`. Default format is `all`, downloads all files.
-- username - Username associated with the `API_id` and `chat_id`
-- password - passsword for the given Username
-
+```yaml
+- api_hash:  - The api_hash you got from telegram apps
+- api_id: - The api_id you got from telegram apps
+- chat_id: -  The id of the chat/channel you want to download media. Which you get from the above-mentioned steps.
+- media_types: - Type of media to download, you can update which type of media you want to download it can be one or any of the available types.
+- file_formats: - File types to download for supported media types which are `audio`, `document` and `video`. Default format is `all`, downloads all files.
+- username: - Username associated with the **API_id** and `chat_id`
+- password: - passsword for the given Username
+```
 ## Execution
 After proper setup is done, every time the Pi boots up it will automatically run, and would start displaying the Notice Media files in loop
 
