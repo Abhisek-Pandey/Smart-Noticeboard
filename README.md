@@ -104,16 +104,6 @@ After proper setup is done, every time the Pi boots up it will automatically run
 
 
 
-Requirement:
-    - Raspberry Pi
-    - Python
-    - Java
-    - apache libraries (Java)
-    - PIL library (Python)
-    - Tkinter Library
-    - PyYAML==6.0
-    - rich==12.5.1
-    - TgCrypto==1.2.3
 
 
 
