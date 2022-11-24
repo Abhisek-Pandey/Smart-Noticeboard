@@ -7,9 +7,9 @@ public class SmartNoticeBoard	{
 	public static void main(String[] args) throws Exception	{
 			while(true)	{
 				System.out.println("Updation and Arrangement");
-				SmartNoticeBoardUpdation.Updation();
+				SmartNoticeBoardUpdation.updation();
 				System.out.println("Updated");
-				FileArrangement.Arrange();
+				FileArrangement.arrange();
 				System.out.println("Arranged");
 				Thread.sleep(5000);
 				int i = 1;

@@ -1,5 +1,5 @@
 
-<h1 align="center">Telegram Media Downloader</h1>
+<h1 align="center">Smart Noticeboard</h1>
 
 <p align="center">
 <a href="https://github.com/Dineshkarthik/telegram_media_downloader/actions"><img alt="Unittest" src="https://github.com/Dineshkarthik/telegram_media_downloader/workflows/Unittest/badge.svg"></a>
@@ -19,36 +19,25 @@
 </h3>
 
 ### Overview:
-Download all media files from a conversation or a channel that you are a part of from telegram.
-A meta of last read/downloaded message is stored in the config file so that in such a way it won't download the same media file again.
-
+Display all the Notices on a screen from anywhere with a Telegram channel
 ### Support:
 | Category | Support |
 |--|--|
-|Language | `Python 3.7 ` and above|
-|Download media types|  audio, document, photo, video, video_note, voice|
+|Language | `Python 3.7 ` and above| `Java `
+|Supported media types|   document, photo, video|
 
 ### ToDo:
-- Add support for multiple channels/chats.
+- Reducing the Bandwidth required.
+- Better UI
 
 ### Installation
 
-For *nix os distributions with `make` availability
-```sh
-$ git clone https://github.com/Dineshkarthik/telegram_media_downloader.git
-$ cd telegram_media_downloader
-$ make install
-```
-For Windows which doesn't have `make` inbuilt
-```sh
-$ git clone https://github.com/Dineshkarthik/telegram_media_downloader.git
-$ cd telegram_media_downloader
-$ pip3 install -r requirements.txt
-```
-
+1. Save the Project to the `Raspberry Pi`. 
+2. Configure the `config.yaml`
+3. #$%#$%$%
 ## Configuration
 
-All the configurations are  passed to the Telegram Media Downloader via `config.yaml` file.
+All the configurations are  passed to the Smart Noticeboard via `config.yaml` file.
 
 **Getting your API Keys:**
 The very first step requires you to obtain a valid Telegram API key (API id/hash pair):
@@ -87,68 +76,39 @@ media_types:
 - audio
 - document
 - photo
-- video
-- voice
 file_formats:
   audio:
   - all
   document:
   - pdf
-  - epub
   video:
   - mp4
-```
-
-- api_hash  - The api_hash you got from telegram apps
-- api_id - The api_id you got from telegram apps
-- chat_id -  The id of the chat/channel you want to download media. Which you get from the above-mentioned steps.
-- last_read_message_id - If it is the first time you are going to read the channel let it be `0` or if you have already used this script to download media it will have some numbers which are auto-updated after the scripts successful execution. Don't change it.
-- ids_to_retry - `Leave it as it is.` This is used by the downloader script to keep track of all skipped downloads so that it can be downloaded during the next execution of the script.
-- media_types - Type of media to download, you can update which type of media you want to download it can be one or any of the available types.
-- file_formats - File types to download for supported media types which are `audio`, `document` and `video`. Default format is `all`, downloads all files.
-
-## Execution
-```sh
-$ python3 media_downloader.py
-```
-All the downloaded media will be stored inside  respective direcotry named  in the same path as the python script.
-
-| Media type | Download directory |
-|--|--|
-| audio | path/to/project/audio |
-| document | path/to/project/document |
-| photo | path/to/project/photo |
-| video | path/to/project/video |
-| voice | path/to/project/voice |
-| voice_note | path/to/project/voice_note |
-
-## Proxy
-`socks4, socks5, http` proxies are supported in this project currently. To use it, add the following to the bottom of your `config.yaml` file
-
-```yaml
-proxy:
+  - mkv
   scheme: socks5
   hostname: 11.22.33.44
   port: 1234
   username: your_username
   password: your_password
 ```
-If your proxy doesn’t require authorization you can omit username and password. Then the proxy will automatically be enabled.
 
-## Contributing
-### Contributing Guidelines
-Read through our [contributing guidelines](https://github.com/Dineshkarthik/telegram_media_downloader/blob/master/CONTRIBUTING.md) to learn about our submission process, coding rules and more.
+- api_hash  - The api_hash you got from telegram apps
+- api_id - The api_id you got from telegram apps
+- chat_id -  The id of the chat/channel you want to download media. Which you get from the above-mentioned steps.
+- media_types - Type of media to download, you can update which type of media you want to download it can be one or any of the available types.
+- file_formats - File types to download for supported media types which are `audio`, `document` and `video`. Default format is `all`, downloads all files.
+- username - Username associated with the `API_id` and `chat_id`
+- password - passsword for the given Username
 
-### Want to Help?
-Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our guidelines for [contributing](https://github.com/Dineshkarthik/telegram_media_downloader/blob/master/CONTRIBUTING.md).
+## Execution
+After proper setup is done, every time the Pi boots up it will automatically run, and would start displaying the Notice Media files in loop
 
-### Code of Conduct
-Help us keep Telegram Media Downloader open and inclusive. Please read and follow our [Code of Conduct](https://github.com/Dineshkarthik/telegram_media_downloader/blob/master/CODE_OF_CONDUCT.md).
-
-
+## Proxy
+`socks4, socks5, http` proxies are supported in this project currently. To use it, add the following to the bottom of your `config.yaml` file
 
 
-# Smart-Noticeboard
+
+
+
 Requirement:
     - Raspberry Pi
     - Python
@@ -161,12 +121,4 @@ Requirement:
     - TgCrypto==1.2.3
 
 
-This project uses Raspberry Pi to download and store data into its primary location and display then to Monitor connected to raspberry pi. 
-The Telegram channel that is connected to the raspberry pi is connected through the config.yaml file 
-Edit the config.yaml file before using the project due check that you put correct information into this file
-##
-api_hash: [your_API_hash_of_your_channel]
-api_id: [Your_API_id_for_the_channel]
-chat_id: [Chat_id_of_the_bot/admin]
-Don't Edit any other thing in this file.
 

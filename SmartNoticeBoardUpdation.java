@@ -14,7 +14,7 @@ public class SmartNoticeBoardUpdation	{
 	  waitFor() that determines the successful execution of the program*/
 	private static int exitVal;
 	/*Start of Main()*/
-	public static void Updation() throws IOException	{
+	public static void updation() throws IOException	{
 	/*try keyword for the execution of the IOexception*/
 	try {
 		/*Execution of the command using exec() of Runtime class by
