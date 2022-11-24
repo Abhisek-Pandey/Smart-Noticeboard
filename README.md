@@ -9,13 +9,12 @@
 </p>
 
 <h3 align="center">
-  <a href="pandey240600@gmail.com">Feature request</a>
+  <a href="https://mail.google.com/mail/u/0/?fs=1&to=abhisek.pandey.1289@gmail.com&su=Feature%20Request%20for%20Smart%20NoticeBoard&body=I%20would%20like%20that%20you%20would%20include%20&bcc=pandey240600@gmail.com&tf=cm">Feature request</a>
   <span> · </span>
-  <a href="https://github.com/Dineshkarthik/telegram_media_downloader/issues">Report a bug</a>
+  <a href="https://mail.google.com/mail/u/0/?fs=1&to=abhisek.pandey.1289@gmail.com&su=Bug%20Detected%20in%20Smart%20NoticeBoard&body=I%20saw%20this%20bug%20&bcc=pandey240600@gmail.com&tf=cm">Report a bug</a>
   <span> · </span>
-  Support: <a href="https://github.com/Dineshkarthik/telegram_media_downloader/discussions">Discussions</a>
+  Support: <a href="https://t.me/abhisekJii">Discussions</a>
   <span> & </span>
-  <a href="https://t.me/tgmdnews">Telegram Community</a>
 </h3>
 
 ### Overview:
