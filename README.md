@@ -25,9 +25,14 @@ Display all the Notices on a screen from anywhere with a Telegram channel
 
 ### Installation
 
-1. Save the Project to the `Raspberry Pi`. 
-2. Configure the `config.yaml`
-3. Run the Setup.py
+1. Download the ` Repositories ` as Zip. 
+2. Boot to `Raspberry Pi` 
+3. Install `Python 3.7` and `Java 1.8 or Higher`
+4. Save the ` Repositories ` and Extract all its contents.
+5. Run **` pip install -r requirements.txt `** in `Terminal` as same directory as the Extracted files above.
+6. Create a shell file to run **` java SmartNoticeBoard `**.
+7. Set the Shell file to be executed every time the Raspberry Pi boots(varies from Raspberry OS and Methods you choose as you need).
+
 ## Configuration
 
 All the configurations are  passed to the Smart Noticeboard via `config.yaml` file.
