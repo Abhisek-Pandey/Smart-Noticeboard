@@ -23,7 +23,7 @@ Display all the Notices on a screen from anywhere with a Telegram channel
 ### Support:
 | Category | Support |
 |--|--|
-|Language | `Python 3.7 ` and above| `Java `
+|Language | `Python 3.7 ` and above,  `Java 17`|
 |Supported media types|   document, photo, video|
 
 ### ToDo:
