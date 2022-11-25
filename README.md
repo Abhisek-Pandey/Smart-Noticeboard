@@ -99,7 +99,7 @@ file_formats:
 - **password** - passsword for the given Username
 
 ## Execution
-After proper setup is done, every time the Pi boots up it will automatically run, and would start displaying the Notice Media files in loop
+After proper setup is done, every time the Pi boots up it will automatically run, and would start displaying the Notice Media files and Gets update it self in every 24 Hour
 
 
 

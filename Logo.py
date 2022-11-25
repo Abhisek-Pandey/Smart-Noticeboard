@@ -28,6 +28,7 @@ def showPIL(pilImage):
     
     
 
-photo = Image.open("GIET LOGO PNG.png")
+photo = Image.open("AR.png")
 showPIL(photo)
+time.sleep(10)
 root.destroy()
