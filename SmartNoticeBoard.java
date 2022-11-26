@@ -1,7 +1,5 @@
 import java.io.*;
 import java.net.InetAddress;
-import java.util.Date;
-
 import org.apache.commons.net.ntp.NTPUDPClient; 
 import org.apache.commons.net.ntp.TimeInfo;
 
@@ -14,22 +12,18 @@ public class SmartNoticeBoard	{
 	static InetAddress inetAddress;
 	static TimeInfo timeInfo;
 	static long currentTime = time();
+	static Logo logo = new Logo();
 	public static void main(String[] args) throws Exception	{
-		System.out.println("Main -  time  "+currentTime);
+		logo.start();
 		SmartNoticeBoardUpdation.updation();
 		FileArrangement.arrange();
-		System.out.println("Updated and Arrange");
 		while(true)	{
-			System.out.println("Check  "+time());
-			if((currentTime+8_64_00_000l) <= time())	{
+			if((currentTime+/*8_64_00_000l*/300000) <= time())	{
 				SmartNoticeBoardUpdation.updation();
 				FileArrangement.arrange();
 				currentTime = time();
-				System.out.println("Updated and Arrange");
 			}
-			//NoticeDisplaying.Display();
-			System.out.println("Displaying");
-			Thread.sleep(25000);
+			NoticeDisplaying.Display();
 		}
 	}
 	public static long time()	{
@@ -42,6 +36,16 @@ public class SmartNoticeBoard	{
 		}
         return timeInfo.getReturnTime();
 	} 
+	static class Logo extends Thread{
+		String command;
+		Process process;
+		public void run()	{
+			command = "python3 Logo.py";
+			try {
+				process = Runtime.getRuntime().exec(command);
+			} catch (IOException e) {	e.printStackTrace();}
+		}
+	}
 }
 	
 	
