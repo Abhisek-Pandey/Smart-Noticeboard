@@ -25,10 +25,11 @@ def showPIL(pilImage):
     imagesprite = canvas.create_image(w/2,h/2,image=image)
     root.update_idletasks()
     root.update()
+    time.sleep(3600)
     
     
 
-photo = Image.open("AR.png")
-showPIL(photo)
-time.sleep(10)
+photo = Image.open("Logo.png")
+while True:
+    showPIL(photo) 
 root.destroy()
