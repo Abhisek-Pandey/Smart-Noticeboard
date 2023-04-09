@@ -12,7 +12,7 @@
 </h3>
 
 ### Overview:
-Display all the Notices on a screen from anywhere with a Telegram channel
+This program runs on the Raspberry-Pi and display all the media file that are been posted in the Telegram channel associated with the raspberry-Pi
 ### Support:
 | Category | Support |
 |--|--|
